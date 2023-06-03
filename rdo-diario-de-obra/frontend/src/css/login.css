@@ -39,6 +39,7 @@ input[type="text"], form > input[type="password"] {
 
 input[type="submit"] {
     height: 2rem;
+    margin-top: 0.5rem;
     border-radius: 3px;
     border: none;
     background-color: #125E6E;
@@ -49,4 +50,15 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     border: 1px solid white;
+}
+
+@media (max-width: 400px) {
+
+    #login-icon {
+        width: 15rem;
+    }
+
+    form {
+        width: 12rem;
+    }
 }
