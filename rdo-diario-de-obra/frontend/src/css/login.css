@@ -20,9 +20,14 @@ body {
     width: 20rem;
 }
 
+h1 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
 form {
     width: 15rem;
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
