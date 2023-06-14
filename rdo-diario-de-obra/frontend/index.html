@@ -10,13 +10,16 @@
     <title>RDO - LOGIN</title>
 </head>
 <body>
+    <button onclick="speak(loginDescription)"><img src="./assets/speak-icon1.svg"></button>
     <img id="login-icon" src="./assets/login-icon.png">
     <h1>RDO - DIÁRIO DE OBRAS</h1>
     <form id="loginForm">
-        <input type="text" placeholder="Usuário">
-        <input type="password" placeholder="Senha">
+        <input id="cpf" type="text" placeholder="CPF">
+        <input id="password" type="password" placeholder="Senha">
         <input type="submit" value="Entrar">
     </form>
     <script src="./src/js/login.js"></script>
+    <script src="./src/js/fieldDescriptions.js"></script>
+    <script src="./src/js/textToSpeech.js"></script>
 </body>
 </html>
