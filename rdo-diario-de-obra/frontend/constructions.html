@@ -12,33 +12,30 @@
 <body>
     <header>
         <div>
-            <button><img src="./assets/add-profile-icon.svg"></button>
-            <button><img src="./assets/plus-square.svg"></button>
+            <a href="./addWorker.html"><img src="./assets/add-profile-icon.svg"></a>
+            <a href="./addConstruction.html"><img src="./assets/plus-square.svg"></a>
         </div>
         <h1 id="title1">RDO - DIÁRIO DE OBRAS</h1>
         <h1 id="title2">RDO</h1>
         <div>
-            <button><img src="./assets/speaker-wave-icon.svg"></button>
-            <button><img src="./assets/logout-icon.svg"></button>
+            <button onclick="speak(constructionsDescription)"><img src="./assets/speak-icon1.svg"></button>
+            <button onclick="logout()"><img src="./assets/logout-icon.svg"></button>
         </div>
     </header>
     <main>
-        <button class="construction">
-            <div>
+        <h2>Obras cadastradas</h2>
+        <hr>
+        <ul id="constructionsContainer" class="constructions-container">
+            <li class="construction">
                 <h2>Condomínio Teste</h2>
                 <p>Rua Teste</p>
                 <p>Situação: Em andamento</p>
                 <p>Responsável: Roger</p>
-            </div>
-        </button>
-        <button class="construction">
-            <div>
-                <h2>Condomínio Teste II</h2>
-                <p>Rua Teste II</p>
-                <p>Situação: Em andamento</p>
-                <p>Responsável: Felipe</p>
-            </div>
-        </button>
+            </li>
+        </ul>
     </main>
+    <script src="./src/js/constructions.js"></script>
+    <script src="./src/js/fieldDescriptions.js"></script>
+    <script src="./src/js/textToSpeech.js"></script>
 </body>
 </html>

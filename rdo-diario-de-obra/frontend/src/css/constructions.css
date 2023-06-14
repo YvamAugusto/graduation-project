@@ -3,10 +3,10 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     width: 100%;
     height: 100%;
-    background-color: #C6F5FF;
+    background-color: #ffffff;
 }
 
 header {
@@ -22,14 +22,14 @@ header {
     background-color: #0b3942;
 }
 
-header > button, header > div > button  {
+button  {
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
 }
 
-button > img {
+a > img, button > img {
     width: 3rem;
 }
 
@@ -47,35 +47,48 @@ header > h1 {
 }
 
 main {
-    margin: 4rem 0 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 4rem auto;
+    padding: 1rem 4%;
+}
+
+main > h2 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main > hr {
+    border: 1px solid #125E6E;
+    margin: 1rem 0;
+}
+
+.constructions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .construction {
-    width: 85%;
-    display: flex;
-    margin-top: 1rem;
     padding: 0.5rem;
-    background-color: transparent;
-    border: 1px solid #125E6E;
+    border: 1px solid #000000;
     border-radius: 0.5rem;
     cursor: pointer;
-    text-align: start;
 }
 
 .construction:hover {
-    background-color: #b1f1ff;
+    background-color: #125f6e13;
 }
 
-.construction > div > h2 {
-    text-transform: uppercase;
-    font-size: 1rem;
+.construction > h2 {
+    font-size: 1.05rem;
 }
 
-.construction > div > p {
+.construction > p {
     padding-top: 0.2rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 800px) {
@@ -85,7 +98,7 @@ main {
         padding: 0 1rem;
     }
 
-    button > img {
+    a > img, button > img {
         width: 2rem;
     }
 
@@ -98,7 +111,6 @@ main {
     }
 
     main {
-        margin-top: 3rem;
+        margin: 3rem auto;
     }
-    
 }
