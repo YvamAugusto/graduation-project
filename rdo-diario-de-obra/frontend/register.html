@@ -9,125 +9,211 @@
     <title>RDO - Diário de Obra</title>
 </head>
 <body>
-    <header></header>
-    <body>
+    <header>
+        <h1 id="title1">RDO - DIÁRIO DE OBRAS</h1>
+        <h1 id="title2">RDO</h1>
+    </header>
+    <main>
         <section>
-            <div class="section">
-                <hr>
-                <p>CLIMA</p>
-                <hr>
-            </div>
-            <div>
-                <div>
+            <h2>Condições Climáticas</h2>
+            <hr>
+            <form>
+                <div class="field-description">
+                    <label for="">Informações sobre o clima:</label>
+                    <button class="speak-record-button"><img src="./assets/speak-icon1.svg"></button>
+                </div>
+                <div class="climate-radio">
+                    <span class="day-period">Manhã:</span>
                     <div>
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
+                        <input type="radio" id="openMorning" name="morningClimate" value="Aberto">
+                        <label for="openMorning">Aberto</label>
                     </div>
                     <div>
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
+                        <input type="radio" id="cloudyMorning" name="morningClimate" value="Nublado">
+                        <label for="cloudyMorning">Nublado</label>
                     </div>
                     <div>
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
+                        <input type="radio" id="rainyMorning" name="morningClimate" value="Chuvoso">
+                        <label for="rainyMorning">Chuvoso</label>
                     </div>
                 </div>
-                <hr>
-                <div>
+                <br>
+                <div class="climate-radio">
+                    <span class="day-period">Tarde:</span>
                     <div>
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
+                        <input type="radio" id="openAfternoon" name="afternoonClimate" value="Aberto">
+                        <label for="openAfternoon">Aberto</label>
                     </div>
                     <div>
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
+                        <input type="radio" id="cloudAfternoon" name="afternoonClimate" value="Nublado">
+                        <label for="cloudAfternoon">Nublado</label>
                     </div>
                     <div>
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
+                        <input type="radio" id="rainyAfternoon" name="afternoonClimate" value="Chuvoso">
+                        <label for="rainyAfternoon">Chuvoso</label>
                     </div>
                 </div>
-                <textarea name="" id=""></textarea>
-            </div>
-            
+                <hr class="separator">
+                <div class="field-description">
+                    <label for="">Informações sobre as condições:</label>
+                    <button class="speak-record-button"><img src="./assets/speak-icon1.svg"></button>
+                </div>
+                <div class="climate-radio">
+                    <span class="day-period">Manhã:</span>
+                    <div>
+                        <input type="radio" id="practicableMorning" name="morningConditions" value="Praticável">
+                        <label for="practicableMorning">Praticável</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="impracticalMorning" name="morningConditions" value="Impraticável">
+                        <label for="impracticalMorning">Impraticável</label>
+                    </div>
+                </div>
+                <br>
+                <div class="climate-radio">
+                    <span class="day-period">Tarde:</span>
+                    <div>
+                        <input type="radio" id="practicableAfternoon" name="afternoonConditions" value="Praticável">
+                        <label for="">Praticável</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="impracticalAfternoon" name="afternoonConditions" value="Impraticável">
+                        <label for="">Impraticável</label>
+                    </div>
+                </div>
+                <hr class="separator">
+                <div class="field-description">
+                    <label>Observação:</label>
+                    <button class="speak-record-button"><img src="./assets/speak-icon1.svg"></button>
+                </div>
+                <div class="text-field">
+                    <textarea name="" id="" rows="3"></textarea>
+                    <button class="speak-record-button"><img src="./assets/mic-icon.svg"></button>
+                </div>
+            </form>
         </section>
+
         <section>
-            <div class="section">
-                <hr>
-                <p>ATIVIDADES</p>
-                <hr>
-            </div>
-            <div>
-                <textarea name="" id=""></textarea>
-                <textarea name="" id=""></textarea>
-                <textarea name="" id=""></textarea>
-            </div>
+            <h2>Atividades</h2>
+            <hr>
+            <form action="">
+                <div class="field-description">
+                    <label>Observações:</label>
+                    <button class="speak-record-button"><img src="./assets/speak-icon1.svg"></button>
+                </div>
+                <div class="text-field">
+                    <textarea name="" id="" rows="3"></textarea>
+                    <button class="speak-record-button"><img src="./assets/mic-icon.svg"></button>
+                </div>
+            </form>
         </section>
+
         <section>
-            <div class="section">
-                <hr>
-                <p>OCORRÊNCIAS</p>
-                <hr>
-            </div>
-            <div>
-                <textarea name="" id=""></textarea>
-                <textarea name="" id=""></textarea>
-                <textarea name="" id=""></textarea>
-            </div>
+            <h2>Ocorrências</h2>
+            <hr>
+            <form action="">
+                <div class="field-description">
+                    <label>Observações:</label>
+                    <button class="speak-record-button"><img src="./assets/speak-icon1.svg"></button>
+                </div>
+                <div class="text-field">
+                    <textarea name="" id="" rows="3"></textarea>
+                    <button class="speak-record-button"><img src="./assets/mic-icon.svg"></button>
+                </div>
+            </form>
         </section>
-        <section >
-            <div class="section">
-                <hr>
-                <p>MATERIAIS</p>
-                <hr>
-            </div>
-            <div>
-                <textarea name="" id=""></textarea>
-                <textarea name="" id=""></textarea>
-                <textarea name="" id=""></textarea>
-            </div>
-        </section>
+
         <section>
-            <div class="section">
-                <hr>
-                <p>MÃO DE OBRA</p>
-                <hr>
-            </div>
-            <div>
-                <textarea name="" id=""></textarea>
-                <textarea name="" id=""></textarea>
-                <textarea name="" id=""></textarea>
-            </div>
+            <h2>Materiais Utilizados</h2>
+            <hr>
+            <form action="">
+                <div class="field-description">
+                    <label>Observações:</label>
+                    <button class="speak-record-button"><img src="./assets/speak-icon1.svg"></button>
+                </div>
+                <div class="text-field">
+                    <textarea name="" id="" rows="3"></textarea>
+                    <button class="speak-record-button"><img src="./assets/mic-icon.svg"></button>
+                </div>
+            </form>
         </section>
+
         <section>
-            <div class="section">
-                <hr>
-                <p>ANEXOS</p>
-                <hr>
-            </div>
-            <div>
+            <h2>Mão de Obra</h2>
+            <hr>
+            <form action="">
+                <div class="field-description">
+                    <label>Observações:</label>
+                    <button class="speak-record-button"><img src="./assets/speak-icon1.svg"></button>
+                </div>
+                <div class="text-field">
+                    <textarea name="" id="" rows="3"></textarea>
+                    <button class="speak-record-button"><img src="./assets/mic-icon.svg"></button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>Anexos</h2>
+            <hr>
+            <form action="">
                 <input type="file">
-                <textarea name="" id=""></textarea>
-            </div>
+                <div class="field-description">
+                    <label>Observação:</label>
+                    <button class="speak-record-button"><img src="./assets/speak-icon1.svg"></button>
+                </div>
+                <div class="text-field">
+                    <textarea name="" id="" rows="3"></textarea>
+                    <button class="speak-record-button"><img src="./assets/mic-icon.svg"></button>
+                </div>
+            </form>
         </section>
+
         <section>
-            <div class="section">
-                <hr>
-                <p>COMENTÁRIOS</p>
-                <hr>
-            </div>
-            <div>
-                <textarea name="" id=""></textarea>
-                <button type="submit">Concluir</button>
-            </div>
-        </section>
-    </body>
-    <footer></footer>
+            <h2>Conclusão</h2>
+            <hr>
+            <form action="">
+                <div class="field-description">
+                    <label>Comentário geral do dia:</label>
+                    <button class="speak-record-button"><img src="./assets/speak-icon1.svg"></button>
+                </div>
+                <div class="text-field">
+                    <textarea name="" id="" rows="3"></textarea>
+                    <button class="speak-record-button"><img src="./assets/mic-icon.svg"></button>
+                </div>
+            </form>
+        </section> 
+    </main>
+    <footer id="visualNavigation">
+        <div>
+            <img src="./assets/climate-icon.svg">
+            <!--<p>Clima</p>-->
+        </div>
+        <div>
+            <img src="./assets/work-icon.svg">
+            <!--<p>Atividades</p>-->
+        </div>
+        <div>
+            <img src="./assets/alert-icon.svg">
+            <!--<p>Ocorrências</p>-->
+        </div>
+        <div>
+            <img src="./assets/work-tools-icon.svg">
+            <!--<p>Materiais</p>-->
+        </div>
+        <div>
+            <img src="./assets/group-icon.svg">
+            <!--<p>Mão de Obra</p>-->
+        </div>
+        <div>
+            <img src="./assets/camera-icon.svg">
+            <!--<p>Anexos</p>-->
+        </div>
+        <div>
+            <img src="./assets/document-icon.svg">
+            <!--<p>Comentários</p>-->
+        </div>
+    </footer>
+    <script src="./src/js/register.js"></script>
 </body>
 </html>
