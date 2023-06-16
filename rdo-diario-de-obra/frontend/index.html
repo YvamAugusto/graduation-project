@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/app-favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./app-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/login.css">
     <title>RDO - LOGIN</title>
 </head>
 <body>
-    <button onclick="speak(loginDescription)"><img src="./assets/speak-icon1.svg"></button>
-    <img id="login-icon" src="./assets/login-icon.png">
+    <button onclick="speak(loginDescriptionText)"><img src="./speak-icon.svg"></button>
+    <img id="login-icon" src="./login-icon.png">
     <h1>RDO - DIÁRIO DE OBRAS</h1>
     <form id="loginForm">
         <input id="cpf" type="text" placeholder="CPF">
         <input id="password" type="password" placeholder="Senha">
         <input type="submit" value="Entrar">
     </form>
-    <script src="./src/js/login.js"></script>
+    <script type="module" src="./src/js/login.js"></script>
     <script src="./src/js/fieldDescriptions.js"></script>
     <script src="./src/js/textToSpeech.js"></script>
+    <script src="./src/js/guard.js"></script>
 </body>
 </html>

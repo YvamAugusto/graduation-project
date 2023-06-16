@@ -6,7 +6,7 @@
 body {
     width: 100%;
     height: 100%;
-    background-color: #C6F5FF;
+    background-color: #ffffff;
 }
 
 header {
@@ -37,28 +37,36 @@ header > h1 {
 
 main {
     margin: 4rem 0 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 1rem 4%;
+}
+
+main > h2 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main > hr {
+    border: 1px solid #125E6E;
+    margin: 1rem 0;
 }
 
 form {
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-form > h2 {
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    color: black;
-    font-weight: normal;
+form > div > label {
+    color: #0b3942;
 }
 
-form > input {
-    width: 85%;
-    margin-bottom: 0.3rem;
+form > div > input {
+    width: 100%;
+    margin: 0.2rem 0 0.5rem 0;
     padding: 0.8rem 0;
     border: 1px solid #0b3942;
     border-radius: 0.3rem;
@@ -66,16 +74,17 @@ form > input {
     text-indent: 1rem;
 }
 
-form > input:focus {
+form > div > input:focus {
     outline: none;
 }
 
-form > input::placeholder {
+form > div > input::placeholder {
     color: #0b3942;
 }
 
-form > div {
-    width: 85%;
+form > div:last-child {
+    width: 100%;
+    margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -90,6 +99,12 @@ form > div > button {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+form > div > button:first-child {
+    border: 1px solid #0b3942;  
+    background-color: #ffffff;
+    color: #0b3942;
 }
 
 @media (max-width: 800px) {

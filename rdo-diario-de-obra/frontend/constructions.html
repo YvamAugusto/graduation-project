@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/app-favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./app-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/constructions.css">
     <title>RDO - Diário de Obras</title>
@@ -12,30 +12,24 @@
 <body>
     <header>
         <div>
-            <a href="./addWorker.html"><img src="./assets/add-profile-icon.svg"></a>
-            <a href="./addConstruction.html"><img src="./assets/plus-square.svg"></a>
+            <a href="./addWorker.html"><img src="./add-profile-icon.svg"></a>
+            <a href="./addConstruction.html"><img src="./plus-square.svg"></a>
         </div>
         <h1 id="title1">RDO - DIÁRIO DE OBRAS</h1>
         <h1 id="title2">RDO</h1>
         <div>
-            <button onclick="speak(constructionsDescription)"><img src="./assets/speak-icon1.svg"></button>
-            <button onclick="logout()"><img src="./assets/logout-icon.svg"></button>
+            <button onclick="speak(constructionsDescriptionText)"><img src="./speak-icon.svg"></button>
+            <button id="logoutButton"><img src="./logout-icon.svg"></button>
         </div>
     </header>
     <main>
         <h2>Obras cadastradas</h2>
         <hr>
-        <ul id="constructionsContainer" class="constructions-container">
-            <li class="construction">
-                <h2>Condomínio Teste</h2>
-                <p>Rua Teste</p>
-                <p>Situação: Em andamento</p>
-                <p>Responsável: Roger</p>
-            </li>
-        </ul>
+        <ul id="constructionsContainer" class="constructions-container"></ul>
     </main>
-    <script src="./src/js/constructions.js"></script>
+    <script type="module" src="./src/js/constructions.js"></script>
     <script src="./src/js/fieldDescriptions.js"></script>
     <script src="./src/js/textToSpeech.js"></script>
+    <script src="./src/js/guard.js"></script>
 </body>
 </html>

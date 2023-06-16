@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/app-favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./app-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/addConstruction.css">
     <title>RDO - Diário de Obras</title>
@@ -15,19 +15,30 @@
         <h1 id="title2">RDO</h1>
     </header>
     <main>
+        <h2>Adicionar Obra</h2>
+        <hr>
         <form>
-            <h2>Adicionar Obra</h2>
-            <input type="text" id="name" placeholder="Nome">    
-            <input type="text" id="address" placeholder="Endereço">
-            <input type="text" id="cep" placeholder="CEP">
-            <input type="text" id="city" placeholder="Cidade">
-            <input type="text" id="state" placeholder="Estado">
-            <input type="text" id="country" placeholder="País">
             <div>
-                <button>Calcelar</button>
-                <button>Salvar</button>
+                <label for="name">Nome:</label>
+                <input id="name" type="text" placeholder="Nome">
+            </div>
+            <div>
+                <label for="address">Endereço Completo:</label>   
+                <input id="address" type="text" placeholder="Endereço Completo">
+            </div>
+            <div>
+                <label for="manager">Responsável:</label>
+                <select id="manager" name="manager">
+                    <option value="" disabled selected>Selecione um responsável</option>
+                </select>
+            </div>
+            <div>
+                <button id="cancel">Cancelar</button>
+                <button type="submit">Salvar</button>
             </div>
         </form>
     </main>
+    <script src="./src/js/addConstruction.js"></script>
+    <script src="./src/js/guard.js"></script>
 </body>
 </html>
