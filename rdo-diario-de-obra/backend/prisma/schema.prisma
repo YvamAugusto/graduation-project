@@ -1,0 +1,156 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @default(uuid())
+  name       String
+  cpf        String   @unique
+  password   String
+  created_at DateTime @default(now()) @db.Timestamp()
+  role       Role     @default(ENGINEER)
+
+  engineer             EngineerManager[] @relation(name: "EngineerRelation")
+  manager              EngineerManager[] @relation(name: "ManagerRelation")
+  constructionEngineer Construction[]    @relation(name: "ConstructionEngineerRelation")
+  constructionManager  Construction[]    @relation(name: "ConstructionManagerRelation")
+
+  @@map("users")
+}
+
+model EngineerManager {
+  engineer_id String
+  manager_id  String
+
+  engineer User @relation(name: "EngineerRelation", fields: [engineer_id], references: [id])
+  manager  User @relation(name: "ManagerRelation", fields: [manager_id], references: [id])
+
+  @@id([engineer_id, manager_id])
+  @@map("engineers_managers")
+}
+
+model Construction {
+  id          String   @id @default(uuid())
+  name        String
+  address     String
+  engineer_id String
+  manager_id  String
+  created_at  DateTime @default(now()) @db.Timestamp()
+
+  engineer User     @relation(name: "ConstructionEngineerRelation", fields: [engineer_id], references: [id])
+  manager  User     @relation(name: "ConstructionManagerRelation", fields: [manager_id], references: [id])
+  records  Record[]
+
+  @@map("constructions")
+}
+
+model Record {
+  id               String    @id @default(uuid())
+  construction_id  String
+  comment          String
+  created_by       String
+  last_modified_by String?
+  created_at       DateTime  @default(now()) @db.Timestamp()
+  updated_at       DateTime? @db.Timestamp()
+
+  construction      Construction       @relation(fields: [construction_id], references: [id])
+  ClimateConditions ClimateCondition[]
+  Activity          Activity[]
+  occurrence        Occurrence[]
+  images            Image[]
+  MaterialUsed      MaterialUsed[]
+  Workforce         Workforce[]
+
+  @@map("records")
+}
+
+model ClimateCondition {
+  id                  String    @id @default(uuid())
+  record_id           String
+  morning_weather     Weather
+  afternoon_weather   Weather
+  morning_condition   Condition
+  afternoon_condition Condition
+  observation         String
+  created_at          DateTime  @default(now()) @db.Timestamp()
+
+  record Record @relation(fields: [record_id], references: [id])
+
+  @@map("climate_conditions")
+}
+
+model Activity {
+  id          String   @id @default(uuid())
+  record_id   String
+  description String
+  created_at  DateTime @default(now()) @db.Timestamp()
+
+  record Record @relation(fields: [record_id], references: [id])
+
+  @@map("activities")
+}
+
+model Occurrence {
+  id          String   @id @default(uuid())
+  record_id   String
+  description String
+  created_at  DateTime @default(now()) @db.Timestamp()
+
+  record Record @relation(fields: [record_id], references: [id])
+
+  @@map("occurrences")
+}
+
+model MaterialUsed {
+  id          String   @id @default(uuid())
+  record_id   String
+  description String
+  created_at  DateTime @default(now()) @db.Timestamp()
+
+  record Record @relation(fields: [record_id], references: [id])
+
+  @@map("materials_used")
+}
+
+model Workforce {
+  id          String   @id @default(uuid())
+  record_id   String
+  description String
+  created_at  DateTime @default(now()) @db.Timestamp()
+
+  record Record @relation(fields: [record_id], references: [id])
+
+  @@map("workforces")
+}
+
+model Image {
+  id         String   @id @default(uuid())
+  record_id  String
+  link       String
+  created_at DateTime @default(now()) @db.Timestamp()
+
+  record Record @relation(fields: [record_id], references: [id])
+
+  @@map("images")
+}
+
+enum Role {
+  ENGINEER
+  MANAGER
+}
+
+enum Weather {
+  SUNNY
+  CLOUDY
+  RAINY
+}
+
+enum Condition {
+  PRACTICABLE
+  IMPRACTICABLE
+}
