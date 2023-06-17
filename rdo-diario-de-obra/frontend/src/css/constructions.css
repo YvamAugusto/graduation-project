@@ -29,6 +29,10 @@ button  {
     padding: 0;
 }
 
+#addWorkerButton, #addConstructionButton {
+    visibility: hidden;
+}
+
 a > img, button > img {
     width: 3rem;
 }
