@@ -8,7 +8,6 @@ window.addEventListener("load", () => {
         document.getElementById("addWorkerButton").style.visibility = "visible";
         document.getElementById("addConstructionButton").style.visibility = "visible";
     }
-    console.log(decodedToken);
     loadProducts(token);
 });
 
@@ -41,38 +40,3 @@ async function loadProducts(token) {
       constructionsContainer.appendChild(constructionCard);
     });
 }
-
-
-
-
-
-
-
-
-
-
-// async function loadProducts(token) {
-//     // const response = await fetch(`${API_URL}/products`, {
-//     const response = await fetch(`http://localhost:4000/constructions`, {
-//       method: "GET",
-//       // headers: {
-//       //   "Content-Type": "application/json",
-//       //   Authorization: `Bearer ${token}`,
-//       // }
-//     });
-//     const constructions = await response.json();
-//     console.log(constructions);
-//     const constructionsContainer = document.getElementById("constructionsContainer");
-//     constructions.forEach((construction) => {
-//       const constructionCard = document.createElement("li")
-//       constructionCard.innerHTML = `
-//         <li class="construction">
-//           <h2>FODASE</h2>
-//           <p>FODASE</p>
-//           <p>Situação: FODASE</p>
-//           <p>Responsável: FODASE</p>
-//         </li>`;
-//       constructionsContainer.appendChild(constructionCard);
-//     });
-// }
-
