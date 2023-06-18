@@ -4,47 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/app-favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./app-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/register.css">
     <title>RDO - Diário de Obra</title>
 </head>
 <body>
     <header>
-        <button id="backPage" class="back-icon"><img src="./assets/cancel-icon.svg"></button>
+        <button id="backPage" class="back-icon"><img src="./cancel-icon.svg"></button>
         <h1 id="title1">RDO - DIÁRIO DE OBRAS</h1>
         <h1 id="title2">RDO</h1>
     </header>
     <div class="loading">
-        <img class="loading-icon" src="./assets/loading.svg">
+        <img class="loading-icon" src="./loading.svg">
     </div>
     <nav class="vertical-nav-bar">
         <div>
-            <img src="./assets/climate-icon.svg">
+            <img src="./climate-icon.svg">
             <p>Clima</p>
         </div>
         <div>
-            <img src="./assets/work-icon.svg">
+            <img src="./work-icon.svg">
             <p>Atividades</p>
         </div>
         <div>
-            <img src="./assets/alert-icon.svg">
+            <img src="./alert-icon.svg">
             <p>Ocorrências</p>
         </div>
         <div>
-            <img src="./assets/work-tools-icon.svg">
+            <img src="./work-tools-icon.svg">
             <p>Materiais</p>
         </div>
         <div>
-            <img src="./assets/group-icon.svg">
+            <img src="./group-icon.svg">
             <p>Mão de Obra</p>
         </div>
         <div>
-            <img src="./assets/camera-icon.svg">
+            <img src="./camera-icon.svg">
             <p>Anexos</p>
         </div>
         <div>
-            <img src="./assets/document-icon.svg">
+            <img src="./document-icon.svg">
             <p>Comentários</p>
         </div>
     </nav>
@@ -55,8 +55,8 @@
                 <hr>
                 <form>
                     <div class="field-description">
-                        <label>Informações sobre o clima:</label><span class="required">&nbsp*</span>
-                        <button onclick="speak(climateText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <label>Informações sobre o clima:</label><span class="required">*</span>
+                        <button onclick="speak(climateText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="climate-radio">
                         <span class="day-period">Manhã:</span>
@@ -91,8 +91,8 @@
                     </div>
                     <hr class="separator">
                     <div class="field-description">
-                        <label>Informações sobre as condições:</label><span class="required">&nbsp*</span>
-                        <button onclick="speak(conditionsText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <label>Informações sobre as condições:</label><span class="required">*</span>
+                        <button onclick="speak(conditionsText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="climate-radio">
                         <span class="day-period">Manhã:</span>
@@ -120,14 +120,14 @@
                     <hr class="separator">
                     <div class="field-description">
                         <label for="climateObservation">Observação:</label>
-                        <button onclick="speak(climateObservationText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <button onclick="speak(climateObservationText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="text-field">
                         <textarea name="" id="climateObservation" placeholder="Informe a observação..." rows="3"></textarea>
-                        <button onclick="startRecording('climateObservation')" class="speak-record-button" type="button"><img src="./assets/mic-icon.svg"></button>
+                        <button onclick="startRecording('climateObservation')" class="speak-record-button" type="button"><img src="./mic-icon.svg"></button>
                     </div>
                     <div class="nav-buttons">
-                        <button class="next-tab-button" type="button" onclick="nextSection(0)"><img src="./assets/arrow-right-icon.svg"></button>
+                        <button class="next-tab-button" type="button" onclick="nextSection(0)"><img src="./arrow-right-icon.svg"></button>
                     </div>
                 </form>
             </section>
@@ -137,19 +137,19 @@
                 <hr>
                 <form action="">
                     <div class="field-description">
-                        <label>Informe as atividades praticadas no dia:</label><span class="required">&nbsp*</span>
-                        <button onclick="speak(activitiesText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <label>Informe as atividades praticadas no dia:</label><span class="required">*</span>
+                        <button onclick="speak(activitiesText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="text-field">
                         <textarea name="" id="activity" placeholder="Informe a atividade..." rows="3"></textarea>
-                        <button onclick="startRecording('activity')" class="speak-record-button" type="button"><img src="./assets/mic-icon.svg"></button>
+                        <button onclick="startRecording('activity')" class="speak-record-button" type="button"><img src="./mic-icon.svg"></button>
                     </div>
                     <div class="add-button">
                         <button onclick="addTextField()" type="button">Adicionar</button>
                     </div>
                     <div class="nav-buttons">
-                        <button type="button" onclick="previousSection(1)"><img src="./assets/arrow-left-icon.svg"></button>
-                        <button type="button" onclick="nextSection(1)"><img src="./assets/arrow-right-icon.svg"></button>
+                        <button type="button" onclick="previousSection(1)"><img src="./arrow-left-icon.svg"></button>
+                        <button type="button" onclick="nextSection(1)"><img src="./arrow-right-icon.svg"></button>
                     </div>
                 </form>
             </section>
@@ -159,19 +159,19 @@
                 <hr>
                 <form action="">
                     <div class="field-description">
-                        <label>Informe as ocorrências do dia:</label><span class="required">&nbsp*</span>
-                        <button onclick="speak(ocurrencesText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <label>Informe as ocorrências do dia:</label><span class="required">*</span>
+                        <button onclick="speak(ocurrencesText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="text-field">
                         <textarea name="" id="occurrence" placeholder="Informe a ocorrência..." rows="3"></textarea>
-                        <button onclick="startRecording('occurrence')" class="speak-record-button" type="button"><img src="./assets/mic-icon.svg"></button>
+                        <button onclick="startRecording('occurrence')" class="speak-record-button" type="button"><img src="./mic-icon.svg"></button>
                     </div>
                     <div class="add-button">
                         <button onclick="addTextField()" type="button">Adicionar</button>
                     </div>
                     <div class="nav-buttons">
-                        <button type="button" onclick="previousSection(2)"><img src="./assets/arrow-left-icon.svg"></button>
-                        <button type="button" onclick="nextSection(2)"><img src="./assets/arrow-right-icon.svg"></button>
+                        <button type="button" onclick="previousSection(2)"><img src="./arrow-left-icon.svg"></button>
+                        <button type="button" onclick="nextSection(2)"><img src="./arrow-right-icon.svg"></button>
                     </div>
                 </form>
             </section>
@@ -181,16 +181,16 @@
                 <hr>
                 <form action="">
                     <div class="field-description">
-                        <label>Informe os materiais utilizados no dia:</label><span class="required">&nbsp*</span>
-                        <button onclick="speak(materialsUsedText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <label>Informe os materiais utilizados no dia:</label><span class="required">*</span>
+                        <button onclick="speak(materialsUsedText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="text-field">
                         <textarea name="" id="materialUsed" placeholder="Informe o material utilizado..." rows="3"></textarea>
-                        <button onclick="startRecording('materialUsed')" class="speak-record-button" type="button"><img src="./assets/mic-icon.svg"></button>
+                        <button onclick="startRecording('materialUsed')" class="speak-record-button" type="button"><img src="./mic-icon.svg"></button>
                     </div>
                     <div class="nav-buttons">
-                        <button type="button" onclick="previousSection(3)"><img src="./assets/arrow-left-icon.svg"></button>
-                        <button type="button" onclick="nextSection(3)"><img src="./assets/arrow-right-icon.svg"></button>
+                        <button type="button" onclick="previousSection(3)"><img src="./arrow-left-icon.svg"></button>
+                        <button type="button" onclick="nextSection(3)"><img src="./arrow-right-icon.svg"></button>
                     </div>
                 </form>
             </section>
@@ -200,16 +200,16 @@
                 <hr>
                 <form action="">
                     <div class="field-description">
-                        <label>Informe a equipe de trabalho do dia:</label><span class="required">&nbsp*</span>
-                        <button onclick="speak(workForceText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <label>Informe a equipe de trabalho do dia:</label><span class="required">*</span>
+                        <button onclick="speak(workForceText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="text-field">
                         <textarea name="" id="workForce" placeholder="Informe a equipe de trabalho..." rows="3"></textarea>
-                        <button onclick="startRecording('workForce')" class="speak-record-button" type="button"><img src="./assets/mic-icon.svg"></button>
+                        <button onclick="startRecording('workForce')" class="speak-record-button" type="button"><img src="./mic-icon.svg"></button>
                     </div>
                     <div class="nav-buttons">
-                        <button type="button" onclick="previousSection(4)"><img src="./assets/arrow-left-icon.svg"></button>
-                        <button type="button" onclick="nextSection(4)"><img src="./assets/arrow-right-icon.svg"></button>
+                        <button type="button" onclick="previousSection(4)"><img src="./arrow-left-icon.svg"></button>
+                        <button type="button" onclick="nextSection(4)"><img src="./arrow-right-icon.svg"></button>
                     </div>
                 </form>
             </section>
@@ -219,8 +219,8 @@
                 <hr>
                 <form action="">
                     <div class="field-description">
-                        <label>Faça o anexo de imagens da obra:</label><span class="required">&nbsp*</span>
-                        <button onclick="speak(attachmentsText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <label>Faça o anexo de imagens da obra:</label><span class="required">*</span>
+                        <button onclick="speak(attachmentsText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="field-image">
                         <label for="image">Adicionar Imagens</label>
@@ -232,15 +232,15 @@
                     <hr class="separator">
                     <div class="field-description">
                         <label for="attachmentObservation">Observação:</label>
-                        <button onclick="speak(workForceText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <button onclick="speak(workForceText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="text-field">
                         <textarea name="" id="attachmentObservation" placeholder="Informe a observação..." rows="3"></textarea>
-                        <button onclick="startRecording('attachmentObservation')" class="speak-record-button" type="button"><img src="./assets/mic-icon.svg"></button>
+                        <button onclick="startRecording('attachmentObservation')" class="speak-record-button" type="button"><img src="./mic-icon.svg"></button>
                     </div>
                     <div class="nav-buttons">
-                        <button type="button" onclick="previousSection(5)"><img src="./assets/arrow-left-icon.svg"></button>
-                        <button type="button" onclick="nextSection(5)"><img src="./assets/arrow-right-icon.svg"></button>
+                        <button type="button" onclick="previousSection(5)"><img src="./arrow-left-icon.svg"></button>
+                        <button type="button" onclick="nextSection(5)"><img src="./arrow-right-icon.svg"></button>
                     </div>
                 </form>
             </section>
@@ -251,15 +251,15 @@
                 <form action="">
                     <div class="field-description">
                         <label for="comment">Comentário geral do registro de trabalho:</label>
-                        <button onclick="speak(commentText)" class="speak-record-button" type="button"><img src="./assets/speak-icon.svg"></button>
+                        <button onclick="speak(commentText)" class="speak-record-button" type="button"><img src="./speak-icon.svg"></button>
                     </div>
                     <div class="text-field">
                         <textarea name="" id="comment" placeholder="Informe um comentário..." rows="3"></textarea>
-                        <button onclick="startRecording('comment')" class="speak-record-button" type="button"><img src="./assets/mic-icon.svg"></button>
+                        <button onclick="startRecording('comment')" class="speak-record-button" type="button"><img src="./mic-icon.svg"></button>
                     </div>
                     <div class="nav-buttons">
-                        <button type="button" onclick="previousSection(6)"><img src="./assets/arrow-left-icon.svg"></button>
-                        <button type="button" onclick="conclude()"><img src="./assets/ok-icon.svg"></button>
+                        <button type="button" onclick="previousSection(6)"><img src="./arrow-left-icon.svg"></button>
+                        <button type="button" onclick="conclude()"><img src="./ok-icon.svg"></button>
                     </div>
                 </form>
             </section>
@@ -268,25 +268,25 @@
     <footer id="visualNavigation">
         <nav class="horizontal-nav-bar">
             <div>
-                <img src="./assets/climate-icon.svg">
+                <img src="./climate-icon.svg">
             </div>
             <div>
-                <img src="./assets/work-icon.svg">
+                <img src="./work-icon.svg">
             </div>
             <div>
-                <img src="./assets/alert-icon.svg">
+                <img src="./alert-icon.svg">
             </div>
             <div>
-                <img src="./assets/work-tools-icon.svg">
+                <img src="./work-tools-icon.svg">
             </div>
             <div>
-                <img src="./assets/group-icon.svg">
+                <img src="./group-icon.svg">
             </div>
             <div>
-                <img src="./assets/camera-icon.svg">
+                <img src="./camera-icon.svg">
             </div>
             <div>
-                <img src="./assets/document-icon.svg">
+                <img src="./document-icon.svg">
             </div>
         </nav>
     </footer>
@@ -294,5 +294,6 @@
     <script src="./src/js/fieldDescriptions.js"></script>
     <script src="./src/js/textToSpeech.js"></script>
     <script src="./src/js/speechToText.js"></script>
+    <script src="./src/js/guard.js"></script>
 </body>
 </html>
