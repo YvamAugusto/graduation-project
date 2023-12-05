@@ -23,3 +23,5 @@ attachmentsText = "Neste campo, anexe arquivos de imagem referentes ao dia atrav
 attachmentsObservationText = "Neste campo, informe alguma observação referente aos anexos do dia."
 //comments
 commentText = "Neste campo, informe algum comentário adicional referente ao registro do dia."
+//alertMessage
+alertMessageText = "Preencha todos os campos obrigatórios!"

@@ -1,10 +1,10 @@
 import { API_URL } from "./variables.js";
 import jwt_decode from "jwt-decode";
 
+let userRole = jwt_decode(sessionStorage.getItem("access_token")).role;
 window.addEventListener("load", () => {
     let token = sessionStorage.getItem("access_token");
-    let decodedToken = jwt_decode(token);
-    if (decodedToken.role !== "MANAGER") {
+    if (userRole !== "MANAGER") {
         document.getElementById("addWorkerButton").style.visibility = "visible";
         document.getElementById("addConstructionButton").style.visibility = "visible";
     }
@@ -29,7 +29,11 @@ async function loadProducts(token) {
     constructions.forEach((construction) => {
       const constructionCard = document.createElement("li")
       constructionCard.setAttribute("data_id", construction.id);
-      constructionCard.setAttribute("onclick", "window.location.href = './register.html'");
+      if (userRole !== "MANAGER") {
+        constructionCard.setAttribute("onclick", "window.location.href = './constructionHistory.html'");
+      } else {
+        constructionCard.setAttribute("onclick", "window.location.href = './register.html'");
+      }
       constructionCard.innerHTML = `
         <li class="construction">
           <h2>${construction.name}</h2>

@@ -11,7 +11,7 @@ if (speechSynthesis !== undefined) {
 
 function speak(phrase) {
     let toSpeak = new SpeechSynthesisUtterance(phrase);
-    let selectedVoiceName = "Google português do Brasil"    //"Microsoft Daniel - Portuguese (Brazil)" / "Microsoft Maria - Portuguese (Brazil)" / "Google português do Brasil"
+    let selectedVoiceName = "Microsoft Daniel - Portuguese (Brazil)"    //"Microsoft Daniel - Portuguese (Brazil)" / "Microsoft Maria - Portuguese (Brazil)" / "Google português do Brasil"
     voices.forEach((voice) => {
         if (voice.name === selectedVoiceName) {
             toSpeak.voice = voice;

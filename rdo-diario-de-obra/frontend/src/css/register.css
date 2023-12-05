@@ -54,7 +54,7 @@ header > h1 {
     display: none;
 }
 
-.loading {
+#loading {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -104,10 +104,6 @@ header > h1 {
     justify-content: flex-start;
     align-items: center;
     border-radius: 5px;
-}
-
-.vertical-nav-bar > div:hover {
-    background-color: #125E6E;
 }
 
 .vertical-nav-bar > div > img {
@@ -292,11 +288,6 @@ input[type="radio"] {
     background-color: #0b3942;
 }
 
-.horizontal-nav-bar > div > img:hover {
-    background-color: #125E6E;
-    border-radius: 25%;
-}
-
 .horizontal-nav-bar img {
     padding: 0.5rem;
     width: 1.6rem;
@@ -305,6 +296,7 @@ input[type="radio"] {
 
 .required {
     color: red;
+    font-size: 2rem;
 }
 
 @media (max-width: 1200px) {
@@ -367,4 +359,29 @@ input[type="radio"] {
         margin: 3rem auto;
         margin-bottom: 0;
     }
+}
+
+#addActivity {
+    display: none;
+}
+
+#addOccurrence {
+    display: none;
+}
+
+#addMaterialUsed {
+    display: none;
+}
+
+#addWorkForce {
+    display: none;
+}
+
+.vertical-nav-bar-item.active {
+    background-color: #125E6E;
+}
+
+.horizontal-nav-bar-item.active {
+    background-color: #125E6E;
+    border-radius: 25%;
 }

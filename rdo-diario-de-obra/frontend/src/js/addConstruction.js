@@ -21,7 +21,6 @@ async function loadRelatedUsers() {
     });
     const responseUsers = await response.json();
     const users = responseUsers.users;
-    console.log(users);
     if (users.error) {
         alert(users.error);
     } else {
